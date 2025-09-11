@@ -1,0 +1,22 @@
+// Q17: Write a program to find the roots of a quadratic equation and categorize them.
+#include<stdio.h>
+int main()
+{
+    float m;
+    printf("Enter marks");
+    scanf("%f",&m);
+    if (m >= 90){
+        printf("Grade A");
+    }
+    else if (m >= 80){
+        printf("Grade B");
+    }
+    else if (m >= 70){
+        printf("Grade C");
+    }
+    else if (m >= 60){
+        printf("Grade D");
+    }
+    else {printf("Grade F");}
+    return 0;
+}

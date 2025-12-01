@@ -1,0 +1,30 @@
+//Q79: Perform diagonal traversal of a matrix.
+#include <stdio.h>
+int main() {
+    int n, m;
+    printf("Enter size of matrix:");
+    scanf("%d %d", &n, &m);
+    int a[n][m];
+    printf("Enter elements of matrix:");
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < m; j++) {
+            scanf("%d", &a[i][j]);
+        }
+    }
+    for(int d = 0; d < n + m - 1; d++) {
+        int row, col;
+        if(d < m) {
+            row = 0;
+            col = d;
+        } else {
+            row = d - m + 1;
+            col = m - 1;
+        }
+        while(row < n && col >= 0) {
+            printf("%d ", a[row][col]);
+            row++;
+            col--;
+        }
+    }
+    return 0;
+}

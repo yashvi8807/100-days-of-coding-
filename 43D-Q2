@@ -1,0 +1,27 @@
+Q86: Check if a string is a palindrome.
+#include <stdio.h>
+int main() {
+    char str[100];
+    int i = 0, j, len = 0, word = 1;
+    printf("Enter string.");
+    scanf("%s", str);  
+    while (str[len] != '\0') {
+        len++;
+    }
+    i = 0;
+    j = len - 1;
+    while (i < j) {
+        if (str[i] != str[j]) {
+            word = 0;
+            break;
+        }
+        i++;
+        j--;
+    }
+    if (word == 1)
+        printf("It is a Palindrome");
+    else
+        printf("It is not a palindrome");
+
+    return 0;
+}
